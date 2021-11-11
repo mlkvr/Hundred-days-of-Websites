@@ -1,0 +1,91 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    border:black solid;
+    border-radius: 10px;
+}
+.grid-container2 {
+    display: grid;
+    grid-template-columns: auto auto;
+    border:black solid;
+    border-radius: 10px;
+}
+button{
+    background-color: red;
+    width: 95%;
+    height: 10rem;
+    border: red solid;
+    border-radius: 1rem;
+    margin: 10px;
+    box-shadow: gray 5px 5px;
+}
+
+button:hover{
+    background-color: white;
+    box-shadow: red 5px 5px;
+}
+
+.grid-container > div {
+    background-color: rgba(235, 235, 235, 0.8);
+    text-align: center;
+  }
+svg{
+    transform:scale(0.8);
+}
+#kalp {
+    transform:translateY(-100px);
+    animation: roll 1s linear 0.66s 3;
+}
+
+#sinek {
+    transform:translateY(-100px);
+    animation: roll 1s linear 0.33s 3;
+}
+
+#kupa {
+    transform:translateY(-100px);
+    animation: roll 1s linear 0.99s 3;
+}
+#kupa2 {
+    visibility: hidden;
+    transform:translateY(-100px);
+    animation: show 1s linear 3.1s 1;
+    animation-fill-mode: forwards;
+}
+#kalp2 {
+    visibility: hidden;
+    transform:translateY(-100px);
+    animation: show 1s linear 3.1s 1;
+    animation-fill-mode: forwards;
+}
+#sinek2 {
+    visibility: hidden;
+    transform:translateY(-100px);
+    animation: show 1s linear 3.1s 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes roll {
+    0%{
+        transform:translateY(-100px);
+    }
+    50%{
+        transform:translateY(0px);
+    }
+    100%{
+        transform:translateY(100px);
+    }
+}
+
+@keyframes show {
+    0%{
+        transform:translateY(-100px);
+        visibility: hidden;
+        
+    }
+    100%{
+        transform:translateY(0px);
+        visibility: visible;
+
+    }
+}
