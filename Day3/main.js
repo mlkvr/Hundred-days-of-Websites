@@ -1,8 +1,12 @@
 let random_number1;
 let random_number2;
 let random_number3;
+let money = 5000;
 
 function start(){
+    if(money > 0){
+        money -= 1000;
+        document.getElementById("money").innerHTML = money + "$";
     $(".kupasr1").last().removeClass("show").addClass("hide");
     $(".sineksr1").last().removeClass("show").addClass("hide");
     $(".kalpsr1").last().removeClass("show").addClass("hide");
@@ -13,6 +17,7 @@ function start(){
     $(".sineksr3").last().removeClass("show").addClass("hide");
     $(".kalpsr3").last().removeClass("show").addClass("hide");
     setTimeout(generateRandom,100);
+    }
 
     //resetTags();
 }
@@ -67,6 +72,12 @@ function generateRandom(){
         $(".sineksr3").removeClass("show").addClass("hide");
         $(".kupasr3").removeClass("show").addClass("hide");
     }
+
+    if(random_number1 == random_number2 == random_number3){
+        money += 3000;
+        document.getElementById("money").innerHTML = money + "$";
+    }
+
     setTimeout(resetTags, 3000);
 }
 
