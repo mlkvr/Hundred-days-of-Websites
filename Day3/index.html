@@ -5,7 +5,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body>
-
+	<h2>🎰 Jackpot 🎰</h2>
     <div class="grid-container">
         <div>
             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -235,12 +235,23 @@
     </div>
     <div class="grid-container2">
         <div>
-        <p id="money">2000$</p>
+        <p id="money">1000$</p>
+		<p id="iswin"></p>
         </div>
         <div>
             <button onclick="start()"></button>
         </div>
     </div>
+	<audio id="spin">
+		<source src="/Audio/spin.mp3" type="audio/mp3">
+		
+	  Your browser does not support the audio element.
+	  </audio>
+	  <audio id="win">
+		<source src="/Audio/win.mp3" type="audio/mp3">
+		
+	  Your browser does not support the audio element.
+	  </audio>
     <script src="main.js"></script>
 </body>
 </html>

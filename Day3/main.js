@@ -1,11 +1,15 @@
 let random_number1;
 let random_number2;
 let random_number3;
-let money = 5000;
+let isrolling = false;
+let iswon = false;
+let money = 1000;
 
 function start(){
-    if(money > 0){
-        money -= 1000;
+    if(money > 0 && !isrolling){
+        isrolling = true;
+        document.getElementById("iswin").innerHTML="";
+        money -= 100;
         document.getElementById("money").innerHTML = money + "$";
     $(".kupasr1").last().removeClass("show").addClass("hide");
     $(".sineksr1").last().removeClass("show").addClass("hide");
@@ -22,6 +26,8 @@ function start(){
     //resetTags();
 }
 function generateRandom(){
+
+    document.getElementById("spin").play();
 
     $(".kupa").addClass("rollinkupa");
     $(".kalp").addClass("rollinkalp");
@@ -72,12 +78,10 @@ function generateRandom(){
         $(".sineksr3").removeClass("show").addClass("hide");
         $(".kupasr3").removeClass("show").addClass("hide");
     }
-
-    if(random_number1 == random_number2 == random_number3){
-        money += 3000;
-        document.getElementById("money").innerHTML = money + "$";
+    if(random_number1 == random_number2 && random_number1==random_number3&& random_number2==random_number3){
+        iswon=true;
     }
-
+    
     setTimeout(resetTags, 3000);
 }
 
@@ -85,5 +89,12 @@ function resetTags(){
     $(".kupa").removeClass("rollinkupa");
     $(".kalp").removeClass("rollinkalp");
     $(".sinek").removeClass("rollinsinek");
-    
+    if(iswon){
+        money += 1000;
+        document.getElementById("money").innerHTML = money + "$";
+        document.getElementById("win").play();
+        document.getElementById("iswin").innerHTML="YOU WIN!";
+    }
+    iswon = false;
+    isrolling=false;
 }
