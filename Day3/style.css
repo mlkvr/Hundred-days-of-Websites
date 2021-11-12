@@ -32,38 +32,42 @@ button:hover{
 svg{
     transform:scale(0.8);
 }
-#kalp {
+.kalp {
     transform:translateY(-100px);
+   
+}
+
+.sinek {
+    transform:translateY(-100px);
+    
+}
+
+.kupa {
+    transform:translateY(-100px);
+    
+}
+
+.rollinkalp {
     animation: roll 1s linear 0.66s 3;
 }
 
-#sinek {
-    transform:translateY(-100px);
+.rollinsinek {
     animation: roll 1s linear 0.33s 3;
 }
 
-#kupa {
-    transform:translateY(-100px);
+.rollinkupa {
     animation: roll 1s linear 0.99s 3;
 }
-#kupa2 {
-    visibility: hidden;
+
+.show {
     transform:translateY(-100px);
     animation: show 1s linear 3.1s 1;
     animation-fill-mode: forwards;
 }
-#kalp2 {
-    visibility: hidden;
-    transform:translateY(-100px);
-    animation: show 1s linear 3.1s 1;
-    animation-fill-mode: forwards;
+.hide{
+     visibility: hidden !important;
 }
-#sinek2 {
-    visibility: hidden;
-    transform:translateY(-100px);
-    animation: show 1s linear 3.1s 1;
-    animation-fill-mode: forwards;
-}
+
 
 @keyframes roll {
     0%{
