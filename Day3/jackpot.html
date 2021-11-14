@@ -235,6 +235,9 @@
     </div>
     <div class="grid-container2">
         <div>
+		<script>
+			document.getElementById("money").innerHTML = localStorage.getItem("moneysaved");
+			window.localStorage.setItem("moneysaved", 1000);</script>
         <p id="money">1000$</p>
 		<p id="iswin"></p>
         </div>
@@ -243,12 +246,12 @@
         </div>
     </div>
 	<audio id="spin">
-		<source src="/Audio/spin.mp3" type="audio/mp3">
+		<source src="spin.mp3" type="audio/mp3">
 		
 	  Your browser does not support the audio element.
 	  </audio>
 	  <audio id="win">
-		<source src="/Audio/win.mp3" type="audio/mp3">
+		<source src="win.mp3" type="audio/mp3">
 		
 	  Your browser does not support the audio element.
 	  </audio>
