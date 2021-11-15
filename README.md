@@ -1,7 +1,7 @@
 # Hundred-days-of-Websites
 It's my personel challenge that spans hundred days
 
-[Showcase Instagram Page](https://www.instagram.com/hundredaysofwebsites//)
+[Showcase Instagram Page](https://www.instagram.com/hundredaysofwebsites)
 
 Finished Projects so Far
 1. Project Landing Page
