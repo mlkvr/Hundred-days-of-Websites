@@ -1,0 +1,42 @@
+#col1 {
+  background-color: var(--bs-blue);
+}
+
+svg {
+  margin-top: 85px;
+  color: black;
+  margin-left: 155px;
+  transform: scale(12);
+}
+
+#col2 {
+  background-color: #336699;
+}
+
+#col1svg {
+}
+
+#color1 {
+}
+
+.row1 {
+  padding-top: 30px;
+}
+
+.color {
+}
+
+#row2 {
+  padding-top: 50px;
+  padding-left: 83px;
+}
+
+#row3 {
+  padding-top: 20px;
+}
+
+#row-4 {
+  padding-left: 85px;
+  padding-top: 20px;
+}
+
