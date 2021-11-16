@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<head>
+    <title>Day 6</title>
+</head>
+<body>
+    <style>
+        :root{
+            --speed : 1s;
+        }
+        .circle{
+            border: 1px solid black;
+            border-radius: 100%;
+            width: 50px;
+            height: 50px;
+            background-color:black;
+            animation: metronome var(--speed) both infinite linear ;
+        }
+
+        @keyframes metronome {
+            0%{transform: translate(0px);}
+            50%{transform: translate(200px);}
+            100%{transform: translate(0px);}
+        }
+        
+    </style>
+
+    <div class="circle"></div>
+    <div class="control">
+        <input type="range" id="bpm" name="points" min="30" max="180">
+    </div>
+
+    <script>
+        var r = document.querySelector(':root');
+        let bpmeter = document.getElementById("bpm");
+        var tickspeed = 00;
+        var changeSpeed = tickspeed;
+        repeater = setInterval(repeaterFn, tickspeed);
+        bpmeter.addEventListener("change", changeBPM);
+        const tick = new Audio('/Audio/metronom.wav');
+        function changeBPM(){
+            a = bpmeter.value / 60;
+            changeSpeed = bpmeter.value * 1000;
+            a = a * 2;
+            
+            a = a + 's';
+            r.style.setProperty('--speed', a);
+
+        }
+        function repeaterFn(){
+            playSound();
+         if( changeSpeed != tickspeed ){
+          clearInterval(repeater);
+          tickspeed = changeSpeed;
+         repeater = setInterval(repeaterFn, tickspeed);
+         }
+}
+        function playSound(){
+            tick.play()
+          
+        }
+    </script>
+</body>
+</html>
