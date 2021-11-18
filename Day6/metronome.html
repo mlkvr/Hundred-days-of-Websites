@@ -7,41 +7,83 @@
         :root{
             --speed : 1s;
         }
+        .container{
+            margin-left: 50%;
+            margin-top: 20%;
+        }
+        .slider{
+            padding-top: 10px;
+            -webkit-appearance: none;  /* Override default CSS styles */
+            cursor: pointer;
+            background: #fcfcfc;
+          height: 25px; /* Specified height */
+          
+          
+         opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+         -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+          transition: opacity .2s;
+            
+        }
+        .slider:hover {
+            opacity: 1; 
+        }   
+        .slider::-webkit-slider-thumb {
+         -webkit-appearance: none; /* Override default look */
+         appearance: none;
+          width: 25px; /* Set a specific slider handle width */
+          height: 25px; /* Slider handle height */
+          border-radius: 100%;
+         background: gray; /* Green background */
+         cursor: pointer; /* Cursor on hover */
+        }
+
+        #num{
+            color: green;
+            margin-left: 25px;
+        }
+
         .circle{
-            border: 1px solid black;
+            border: 1px solid green;
             border-radius: 100%;
             width: 50px;
             height: 50px;
-            background-color:black;
+            background-color:green;
             animation: metronome var(--speed) both infinite linear ;
         }
 
         @keyframes metronome {
             0%{transform: translate(0px);}
-            50%{transform: translate(200px);}
+            50%{transform: translate(100px);}
             100%{transform: translate(0px);}
         }
         
     </style>
-
-    <div class="circle"></div>
-    <div class="control">
-        <input type="range" id="bpm" name="points" min="30" max="180">
+    <div class="container">
+        <div class="circle"></div>
+        <div class="control">
+            <input class="slider"type="range" id="bpm" name="points" min="30" max="150">
+            <br>
+            <p id="num">90 bpm</p>
+        </div>
     </div>
-
     <script>
         var r = document.querySelector(':root');
         let bpmeter = document.getElementById("bpm");
-        var tickspeed = 00;
+        let output = document.getElementById("num");
+        var tickspeed = 666;
         var changeSpeed = tickspeed;
         repeater = setInterval(repeaterFn, tickspeed);
         bpmeter.addEventListener("change", changeBPM);
         const tick = new Audio('/Audio/metronom.wav');
+
+        bpmeter.oninput = function() {
+        output.innerHTML = this.value + ' bpm';
+        }
+
         function changeBPM(){
-            a = bpmeter.value / 60;
-            changeSpeed = bpmeter.value * 1000;
+            a =   60 / bpmeter.value;
+            changeSpeed = (60 / bpmeter.value)* 1000;
             a = a * 2;
-            
             a = a + 's';
             r.style.setProperty('--speed', a);
 
