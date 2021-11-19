@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>day7</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+    <div class="container maincon">
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <p>Font Name</p>
+            </li>
+            <li class="nav-item"><select id="selectFont">
+                    <option value="1" selected="">Arial</option>
+                    <option value="2">Calibri</option>
+                    <option value="3">Times New Roman</option>
+                </select></li>
+            <li class="nav-item">
+                <p>Font Size</p>
+            </li>
+            <li class="nav-item"><input type="number" id="fontSizeSelector" value="16"></li>
+            <li class="nav-item">
+                <div class="btn-group" role="group"><button class="btn btn-primary" type="button" onclick="makeitalic()"><i class="fa fa-italic"></i></button><button class="btn btn-primary" type="button" onclick="makebold()"><i class="fa fa-bold"></i></button><button class="btn btn-primary" type="button" onclick="makeunderlined()"><i class="fa fa-underline"></i></button></div>
+            </li>
+            <li class="nav-item">
+                <div class="btn-group" role="group"><button class="btn btn-primary" type="button" onclick="makeleftalign()"><i class="fa fa-align-left"></i></button><button class="btn btn-primary" type="button" onclick="makecenteralign()"><i class="fa fa-align-center"></i></button><button class="btn btn-primary" type="button" onclick="makerightalign()"><i class="fa fa-align-right"></i></button></div>
+            </li>
+            <li class="nav-item" id="lastnav"><input type="file" id="fileinput" accept="&quot;.txt&quot;" onchange="previewFile()">
+                <div class="btn-group" role="group"><button class="btn btn-primary" type="button" onclick="inputFile()"><i class="fa fa-cloud-upload"></i></button><button class="btn btn-primary" type="button" onclick="saveDynamicDataToFile()"><i class="fa fa-cloud-download"></i></button></div>
+            </li>
+        </ul><textarea id="textAreaBox" class="textarea"></textarea>
+    </div>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
