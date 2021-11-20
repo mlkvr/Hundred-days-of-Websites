@@ -9,3 +9,6 @@ Finished Projects so Far
 3. Jackpot Slot Machine
 4. Tic Tac Toe
 5. Color Picker
+6. Metronome
+7. Text Editor
+8. Birthday Cake
