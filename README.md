@@ -12,3 +12,4 @@ Finished Projects so Far
 6. Metronome
 7. Text Editor
 8. Birthday Cake
+9. Pomodoro 
