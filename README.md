@@ -13,3 +13,4 @@ Finished Projects so Far
 7. Text Editor
 8. Birthday Cake
 9. Pomodoro 
+10. Daily GIF site
