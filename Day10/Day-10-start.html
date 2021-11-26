@@ -20,19 +20,26 @@
         
         <div class="row">
             <div class="col-sm-2 col-md-2 col-lg-3">
-                <p>test</p>
+                <p></p>
                </div>
             <div class="col-sm-8 col-md-8 col-lg-6">
-             <img id="test" class="img-thumbnail responsive"></img>
+             <img id="test" class="img-thumbnail responsive" style="margin-top: 160px;"></img>
             </div>
             <div class="col-sm-2 col-md-2 col-lg-3">
-                <p>test</p>
+                
+                <div class="row"style="width: 1px; height: 400px;">
+                    <p></p>
+                </div>
+                <div class="row">
+                    <img style="width: 320px; height: 458px;" src="../Images/Poweredby_640px_Badge.gif"></img>
+                </div>
+                <p></p>
             </div>
         </div>
     </div>
 
     <script>
-    var xhr = $.get("api.giphy.com/v1/gifs/trending&api_key=iX192W9NNQLy0QO8oINOvR8Jw5O1opJ3&limit=1");
+    var xhr = $.get("https://api.giphy.com/v1/gifs/trending?api_key=YOURAPIKEYHERE&limit=1&rating=r");
     xhr.done(function(data) { 
         
         let imgurl = data.data[0].images.downsized.url;
