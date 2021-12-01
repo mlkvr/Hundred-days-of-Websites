@@ -1,0 +1,139 @@
+.phonebase {
+  height: 515px;
+  width: 250px;
+  background: floralwhite;
+  border-radius: 50px;
+  box-shadow: 2px 2px 3px rosybrown;
+}
+
+.maincontainer {
+  margin-left: 20px;
+  margin-top: 40px;
+}
+
+.innerbase {
+  width: 100px;
+  height: 50px;
+  margin-left: 70px;
+}
+
+.antennabuttons {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: black;
+  margin-left: 10px;
+  margin-top: 2px;
+}
+
+.antenna {
+  width: 90px;
+  height: 30px;
+  margin-left: 75px;
+  padding-top: 17px;
+}
+
+.innerscreen {
+  height: 405px;
+  width: 90%;
+  margin-left: 5%;
+  background: black;
+  margin-top: 18px;
+  /*border-radius: 2%;*/
+  background-image: url('../../assets/img/bg4.jpg');
+  background-repeat: round;
+}
+
+.homebutton {
+  height: 50px;
+  width: 50px;
+  margin-left: 100px;
+  margin-top: 5px;
+  border-radius: 50%;
+  background: black;
+  background-image: linear-gradient(130deg, black , white,black);
+}
+
+.homebutton-inner {
+  height: 44px;
+  width: 44px;
+  position: relative;
+  background: whitesmoke;
+  border-radius: 50%;
+  margin-left: 3px;
+  margin-top: 3px;
+  /*box-shadow: 0px 0px 5px var(--bs-gray);*/
+}
+
+.lockscreen {
+  width: 200px;
+  height: 200px;
+  margin-left: 20px;
+}
+
+.fa.fa-angle-up {
+  position: relative;
+  margin-top: 50px;
+  margin-left: 80px;
+  font-size: 50px;
+  margin-bottom: -80px;
+  color: white;
+}
+
+.swipetext {
+  position: relative;
+  font-size: 20px;
+  margin-left: 15px;
+  color: white;
+}
+
+.clockscreen {
+  width: 200px;
+  height: 150px;
+  padding-top: 50px;
+  margin-bottom: 50px;
+  margin-left: 20px;
+}
+
+.clocktext {
+  color: white;
+  position: relative;
+  font-size: 40px;
+  font-family: 'Montserrat', sans-serif;
+  margin-left: 35px;
+}
+
+.antennabuttons-wide {
+  width: 50px;
+  height: 4px;
+  background: black;
+  border-radius: 15%;
+  margin-left: 7px;
+  margin-top: 4px;
+}
+
+.powerbutton {
+  width: 30px;
+  height: 3px;
+  margin-left: 240px;
+  background: darkgray;
+  transform: rotate(90deg);
+  position: fixed;
+  margin-top: 100px;
+  border-radius: 20%;
+  background: #bc8f8f;
+}
+
+body {
+  margin: 0;
+  font-family: var(--bs-body-font-family);
+  font-size: var(--bs-body-font-size);
+  font-weight: var(--bs-body-font-weight);
+  line-height: var(--bs-body-line-height);
+  color: var(--bs-body-color);
+  text-align: var(--bs-body-text-align);
+  background-color: var(--bs-gray-900);
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
