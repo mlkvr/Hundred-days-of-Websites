@@ -16,3 +16,4 @@ Finished Projects so Far
 10. Daily GIF site
 11. Ice Cream (PureCSS)
 12. An Iphone (PureCSS) 
+13. SVG Circular Progress Bar
