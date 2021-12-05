@@ -1,6 +1,7 @@
 <html>
     <head>
         <title>Day 13</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     </head>
     <body>
         <style>
@@ -8,6 +9,21 @@
             --end-width: 0;
             
             }
+
+            .container{
+                position: fixed;
+                top:200px;
+                left: 200px;
+            }
+
+            #number{
+                position: relative;
+                top:110px;
+                left:65px;
+                font-size: 24px;
+                font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+
             .circle{
                 fill:none;
                 stroke: url("#GradientColor");
@@ -27,8 +43,9 @@
 
 <div class="container">
     <div class="outerCircle">
+        
         <div class="innerCircle">
-            <div id="number"></div>
+            <p id="number"></p>
         </div>
     </div>
     <svg id="crc" class="circle" xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
@@ -44,8 +61,16 @@
 
     <script>
         
-        let random=Math.floor(Math.random()*360)
+        let random=Math.floor(Math.random()*360);
         document.documentElement.style.setProperty('--end-width', random);
+        let target = (Math.floor((360-random) * 0.27778))
+        //document.getElementById("number").innerHTML = target; 
+        let number = 0;
+        var interval = setInterval(function() {
+        $('#number').text(number);
+        if (number >= target) clearInterval(interval);
+        number++;
+    }, 20);
     </script>
 
     </body>
