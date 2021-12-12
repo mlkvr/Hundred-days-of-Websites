@@ -1,0 +1,134 @@
+<html>
+    <head>
+        <title>Calendar</title>
+    </head>
+    <body>        <style>
+            td{
+                width: 100px;
+                height: 100px;
+                font-size: 40px;
+                text-align: center;
+               
+                color: white;
+                background-color: #a7a8a8;
+                border-radius: 50%;
+ 
+            }
+ 
+            td.nofill{
+                border: 1px solid white !important;
+                background-color: white !important;
+            }
+ 
+            th {
+                width: 100px;
+                height: 100px;
+                font-size: 20px;
+                border-radius: 20%;
+                background-color: #04AA6D;
+                color: white;
+            }
+ 
+            table.center {
+             margin-left: auto;
+              margin-right: auto;
+            }
+ 
+            .green{
+                background-color: #23af80;
+            }
+ 
+            .red{
+                background-color: #af2336;
+            }
+ 
+            .pink{
+                background-color: #388ab9;
+            }
+ 
+            .yellow{
+                background-color: #225096;
+            }
+ 
+            .start{
+               
+                border-radius: 50%;
+                border-top-right-radius: 0px;
+                border-bottom-right-radius: 0px;
+            }
+           
+            .middle{
+                border-radius: 0px;
+            }
+ 
+            .end{
+                border-radius: 50%;
+                border-top-left-radius: 0px;
+                border-bottom-left-radius: 0px;
+            }
+        </style>
+        <table class="center">
+           
+            <tr>
+                <th>Mon</th>
+                <th>Tue</th>
+                <th>Wed</th>
+                <th>Thu</th>
+                <th>Fri</th>
+                <th>Sat</th>
+                <th>Sun</th>
+            </tr>
+            <tr>
+                <td class="nofill"></td>
+                <td class="nofill"></td>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+            </tr>
+ 
+            <tr>
+                <td>6</td>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+                <td>10</td>
+                <td>11</td>
+                <td>12</td>
+            </tr>
+ 
+            <tr>
+                <td class="start green">13</td>
+                <td class="middle green">14</td>
+                <td class="middle green">15</td>
+                <td class="middle green">16</td>
+                <td class="middle green">17</td>
+                <td class="middle green">18</td>
+                <td class="end red">19</td>
+            </tr>
+ 
+            <tr>
+                <td class="start pink">20</td>
+                <td class="middle pink">21</td>
+                <td class="middle pink">22</td>
+                <td class="middle pink">23</td>
+                <td class="middle pink">24</td>
+                <td class="middle pink">25</td>
+                <td class="end red">26</td>
+            </tr>
+ 
+            <tr>
+                <td class="start yellow">27</td>
+                <td class="middle yellow">28</td>
+                <td class="middle yellow">29</td>
+                <td class="middle yellow">30</td>
+                <td class="end red">31</td>
+                <td class="nofill"></td>
+                <td class="nofill"></td>
+            </tr>
+       
+        </table>
+    </body>
+</html>
+
